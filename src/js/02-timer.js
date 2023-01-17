@@ -10,13 +10,15 @@ const showMinute = document.querySelector('.value[data-minutes]');
 const showSecond = document.querySelector('.value[data-seconds]');
 const today = new Date();
 const todayMiliseconds = today.getTime();
+let selectedDate;
+
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    const selectedDate = selectedDates[0];
+    selectedDate = selectedDates[0];
     //Llama a la función que valida la fecha
     validateDate();
   },
