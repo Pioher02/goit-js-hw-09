@@ -44,7 +44,7 @@ function countdown() {
   let specificCountdown = convertMs(selectedDate.getTime() - todayMiliseconds);
   addLeadingZero(specificCountdown);
 
-  timerId = setInterval(() => {
+  const timerId = setInterval(() => {
     if (specificCountdown.seconds > 0) {
       specificCountdown.seconds -= 1;
       addLeadingZero(specificCountdown);
